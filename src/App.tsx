@@ -1,10 +1,13 @@
-function App() {
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
+function App() {
   return (
-    <div>
-      <h1>Hello World !</h1>
+    <div className="App" style={{ height: "100%", width: "100%" }}>
+      <Navbar />
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
