@@ -9,6 +9,8 @@ export default function PlayerRankHoder({
   team,
   quests,
 }: PlayerRank) {
+  throw Error("AN ERROORRRRRRRRRRR");
+
   return (
     <div
       style={{
@@ -22,31 +24,43 @@ export default function PlayerRankHoder({
       <img
         src={`https://crafatar.com/renders/head/${uuid}?size=500&default=MHF_Steve&overlay`}
         style={{
-          height: "5rem",
-          width: "5rem",
+          height: "4rem",
+          width: "4rem",
           backgroundImage: backgroundHead,
         }}
       />
-      <p>
-        <strong>Pseudo : </strong>
-        {pseudo}
-      </p>
-      <p>
-        <strong>Points : </strong>
-        {points}
-      </p>
-      <p>
-        <strong>Rank : </strong>
-        {rank}
-      </p>
-      <p>
-        <strong>Team Name : </strong>
-        {team}
-      </p>
-      <p>
-        <strong>Nbre Quêtes : </strong>
-        {quests}
-      </p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          margin: "0px",
+          gap: "4px",
+        }}
+      >
+        <p style={{ margin: "0px" }}>
+          <strong>{pseudo} </strong>
+        </p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            gap: "4px",
+          }}
+        >
+          <p style={{ margin: "0px" }}>
+            <strong>Points : </strong>
+            {points}
+          </p>
+          <p style={{ margin: "0px" }}>
+            <strong>Team Name : </strong>
+            {team}
+          </p>
+          <p style={{ margin: "0px" }}>
+            <strong>Nbre Quêtes : </strong>
+            {quests}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
