@@ -9,8 +9,6 @@ export default function PlayerRankHoder({
   team,
   quests,
 }: PlayerRank) {
-  throw Error("AN ERROORRRRRRRRRRR");
-
   return (
     <div
       style={{
