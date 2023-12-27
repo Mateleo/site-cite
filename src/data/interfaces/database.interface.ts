@@ -17,6 +17,15 @@ export interface TeamRank {
   players: Player[];
 }
 
+export interface Quest {
+  id: number;
+  quest_name: string;
+  quest_npc: string;
+  description: string;
+  city: string;
+  reward: number;
+}
+
 export interface Player {
   uuid: string;
   pseudo: string;

@@ -46,11 +46,11 @@ export default function PlayerRankHoder({
           }}
         >
           <p style={{ margin: "0px" }}>
-            <strong>Points : </strong>
+            <strong>Réputation : </strong>
             {points}
           </p>
           <p style={{ margin: "0px" }}>
-            <strong>Team Name : </strong>
+            <strong>Team : </strong>
             {team}
           </p>
           <p style={{ margin: "0px" }}>

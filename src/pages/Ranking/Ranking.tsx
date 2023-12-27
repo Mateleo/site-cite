@@ -21,28 +21,22 @@ export default function Ranking() {
 
   return (
     <div>
-      <h1>Ranking Page</h1>
-      <br />
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <div>
-          {playerRankingQuery.isLoading ? (
-            <div>Loading ...</div>
-          ) : playerRankingQuery.isError ? (
-            <div>{JSON.stringify(playerRankingQuery.error)}</div>
-          ) : (
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-            >
-              {playerRankingQuery.data.map((player: PlayerRank) => (
-                <RankHoder rank={player.rank} key={player.uuid}>
-                  <PlayerRankHoder {...player} />
-                </RankHoder>
-              ))}
-            </div>
-          )}
-        </div>
-        <div>
-          {teamRankingQuery.isLoading ? (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <h1>Team Ranking</h1>
+          {/* {teamRankingQuery.isLoading ? (
             <div>Loading ...</div>
           ) : teamRankingQuery.isError ? (
             <div>{JSON.stringify(teamRankingQuery.error)}</div>
@@ -56,7 +50,37 @@ export default function Ranking() {
                 </RankHoder>
               ))}
             </div>
-          )}
+          )} */}
+          <p>Pas disponible actuellement</p>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <h1>Player Ranking</h1>
+          {/* {playerRankingQuery.isLoading ? (
+            <div>Loading ...</div>
+          ) : playerRankingQuery.isError ? (
+            <div>{JSON.stringify(playerRankingQuery.error)}</div>
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+              }}
+            >
+              {playerRankingQuery.data.map((player: PlayerRank) => (
+                <RankHoder rank={player.rank} key={player.uuid}>
+                  <PlayerRankHoder {...player} />
+                </RankHoder>
+              ))}
+            </div>
+          )} */}
+          <p>Pas disponible actuellement</p>
         </div>
       </div>
     </div>

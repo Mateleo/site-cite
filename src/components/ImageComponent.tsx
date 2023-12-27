@@ -1,17 +1,52 @@
-import { useState } from "react"
-import "./imageComponent.css"
+import { useState } from "react";
+import "./imageComponent.css";
+import { AspectRatio } from "@radix-ui/themes";
 
 type LazyImageProps = {
-    image: string,
-    backgroundImage: string
-}
+  image: string;
+  backgroundImage: string;
+  ratio: number;
+};
 
-export function ImageComponent({ image, backgroundImage }: LazyImageProps) {
-    const [isLoaded, setIsLoaded] = useState(false)
+export function ImageComponent({
+  image,
+  backgroundImage,
+  ratio,
+}: LazyImageProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    return (
-        <div className={`blur-load ${!isLoaded ? "" : "loaded"}`} style={{ backgroundImage:`url(${backgroundImage})` }}>
-            <img src={image} loading="lazy" onLoad={() => setIsLoaded(true)}/>
-        </div>
-    )
+  return (
+    <AspectRatio ratio={ratio}>
+      <div
+        className={`blur-load ${!isLoaded ? "" : "loaded"}`}
+        style={{
+          height: "100%",
+          width: "100%",
+          backgroundImage: `url(${backgroundImage})`,
+        }}
+      >
+        {/* {!isLoaded ? (
+          <img
+            src={backgroundImage}
+            alt="Map de la cité"
+            loading="lazy"
+            onLoad={() => setIsLoaded(true)}
+          />
+        ) : (
+          <></>
+        )} */}
+
+        <img
+          src={image}
+          alt="Map de la cité"
+          loading="lazy"
+          style={{
+            height: "100%",
+            width: "100%",
+          }}
+          onLoad={() => setIsLoaded(true)}
+        />
+      </div>
+    </AspectRatio>
+  );
 }

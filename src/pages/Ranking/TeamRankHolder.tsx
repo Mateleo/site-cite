@@ -37,7 +37,7 @@ export default function PlayerRankHoder({
         {rank}
       </p>
       <p>
-        <strong>Points : </strong>
+        <strong>Réputation : </strong>
         {points}
       </p>
       <p>

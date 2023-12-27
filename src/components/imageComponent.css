@@ -1,47 +1,47 @@
-img {
+/* img {
     width: 760px;
     object-position: center;
     object-fit: cover;
-}
+} */
 
 .blur-load {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .blur-load::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    animation: pulse 2.5s infinite;
-    background-color: white;
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: white;
 }
 
 @keyframes pulse {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    50% {
-        opacity: 0.1;
-    }
+  50% {
+    opacity: 0.1;
+  }
 
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 .blur-load.loaded::before {
-    animation: none;
-    content: none;
+  animation: none;
+  content: none;
 }
 
 .blur-load > img {
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
 }
 
 .blur-load.loaded > img {
-    opacity: 1;
+  opacity: 1;
 }

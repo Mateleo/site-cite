@@ -4,6 +4,7 @@ import Map from "./pages/Map/Map";
 import Quests from "./pages/Quests/Quests";
 import App from "./App";
 import Ranking from "./pages/Ranking/Ranking";
+import Info from "./pages/Info/Info";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
     children: [
       { path: "*", element: <Navigate to="/" /> },
       { path: "/", element: <Home /> },
+      { path: "/info", element: <Info /> },
       { path: "/map", element: <Map /> },
       { path: "/quests", element: <Quests /> },
       { path: "/ranking", element: <Ranking /> },
