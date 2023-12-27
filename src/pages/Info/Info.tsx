@@ -5,7 +5,9 @@ export default function Info() {
         style={{
           display: "flex",
           flexDirection: "column",
-          padding: "10px",
+          alignItems: "center",
+          paddingLeft: "60px",
+          paddingRight: "60px",
         }}
       >
         <h1>Information</h1>

@@ -28,18 +28,18 @@ export default function Navbar() {
         <Link to="/" style={styleLink}>
           Home
         </Link>
-        <Link to="/info" style={styleLink}>
+        {/* <Link to="/info" style={styleLink}>
           Info
-        </Link>
+        </Link> */}
         <Link to="/map" style={styleLink}>
           Map
         </Link>
         <Link to="/quests" style={styleLink}>
           Quests
         </Link>
-        <Link to="/ranking" style={styleLink}>
+        {/* <Link to="/ranking" style={styleLink}>
           Ranking
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );

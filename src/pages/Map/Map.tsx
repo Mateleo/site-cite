@@ -45,11 +45,11 @@ export default function Map() {
           <h3>Map et villes :</h3>
           <p>
             La Map du monde de Pejite est de 8000x8000. <br />
-            De nombreuses peupplade y existe, situé aux 4 coins du monde.
-            <br /> Et specialement au sein de 8 cités :
+            De nombreuses peuplades y existent, situées aux 4 coins du monde.
+            <br /> Et spécialement au sein de 8 cités :
           </p>
           <p>
-            Shigenshina, Cyrule, Holymone, Abyss,
+            Shigenshina, Cyrule, Holymon, Abyss,
             <br /> Saharya, Eskival, Hateno, Lone Castle
           </p>
         </div>

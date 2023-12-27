@@ -11,7 +11,10 @@ function App() {
   console.log("Hello 2");
 
   return (
-    <div className="App" style={{ height: "100%", width: "100%" }}>
+    <div
+      className="App"
+      style={{ height: "100%", width: "100%", fontFamily: "roboto" }}
+    >
       {/* <Toast.Provider swipeDirection="right"> */}
       <Navbar />
       <Outlet />

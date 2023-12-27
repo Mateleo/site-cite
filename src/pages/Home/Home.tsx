@@ -6,12 +6,35 @@ import bannerSmall from "../../assets/imgs/small/BannerCityPave-small.jpg";
 
 export default function Home() {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <ImageComponent
         image={banner}
         backgroundImage={bannerSmall}
         ratio={3 / 1}
       />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "red",
+          width: "100%",
+          color: "white",
+        }}
+      >
+        <p
+          style={{
+            margin: "0px",
+          }}
+        >
+          Plus d'information prochainement.
+        </p>
+      </div>
       <div
         style={{
           height: "30%",
