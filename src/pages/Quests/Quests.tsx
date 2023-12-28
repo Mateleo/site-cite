@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { getQuests } from "../../services/quests.service";
 import { Quest } from "../../data/interfaces/database.interface";
-import QuestHolder from "./QuestHolder";
 
 export default function Quests() {
   const questsQuery = useQuery({

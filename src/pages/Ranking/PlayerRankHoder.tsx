@@ -4,7 +4,6 @@ import { PlayerRank } from "../../data/interfaces/database.interface";
 export default function PlayerRankHoder({
   uuid,
   pseudo,
-  rank,
   points,
   team,
   quests,

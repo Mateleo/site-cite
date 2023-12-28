@@ -1,15 +1,15 @@
-import backgroundHead from "../../assets/background_head.png";
+// import backgroundHead from "../../assets/background_head.png";
 import { TeamRank } from "../../data/interfaces/database.interface";
 
 export default function PlayerRankHoder({
-  id,
+  // id,
   name,
   rank,
   points,
   bonus,
-  item,
-  players,
-}: TeamRank) {
+}: // item,
+// players,
+TeamRank) {
   return (
     <div
       style={{

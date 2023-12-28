@@ -1,23 +1,19 @@
-import { useQuery } from "@tanstack/react-query";
-import {
-  getPlayersRanking,
-  getTeamsRanking,
-} from "../../services/ranking.service";
-import PlayerRankHoder from "./PlayerRankHoder";
-import RankHoder from "./RankHolder";
-import { PlayerRank, TeamRank } from "../../data/interfaces/database.interface";
-import TeamRankHolder from "./TeamRankHolder";
+// import { useQuery } from "@tanstack/react-query";
+// import {
+//   getPlayersRanking,
+//   getTeamsRanking,
+// } from "../../services/ranking.service";
 
 export default function Ranking() {
-  const playerRankingQuery = useQuery({
-    queryKey: ["ranking", "players"],
-    queryFn: () => getPlayersRanking(),
-  });
+  // const playerRankingQuery = useQuery({
+  //   queryKey: ["ranking", "players"],
+  //   queryFn: () => getPlayersRanking(),
+  // });
 
-  const teamRankingQuery = useQuery({
-    queryKey: ["ranking", "teams"],
-    queryFn: () => getTeamsRanking(),
-  });
+  // const teamRankingQuery = useQuery({
+  //   queryKey: ["ranking", "teams"],
+  //   queryFn: () => getTeamsRanking(),
+  // });
 
   return (
     <div>
