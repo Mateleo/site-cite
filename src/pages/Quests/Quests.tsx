@@ -18,35 +18,35 @@ export default function Quests() {
         paddingRight: "60px",
       }}
     >
-      <h1>Quêtes</h1>
-      <p>Seul une partie des quêtes est présente actuellement.</p>
-      {questsQuery.isLoading ? (
-        <div>Loading ...</div>
-      ) : questsQuery.isError ? (
+        {questsQuery.isLoading ? (
+            <div>Loading ...</div>
+        ) : questsQuery.isError ? (
         <div>{JSON.stringify(questsQuery.error)}</div>
       ) : (
-        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <table className="table">
-            <thead>
-              <tr>
+        <div className="mt-5" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+          <table className="table table-striped">
+            <thead className="thead-dark">
+            <tr>
                 <th scope="col">NPC</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Objectif</th>
                 <th scope="col">Condition</th>
+                <th scope="col">Répétable</th>
                 <th scope="col">Ville</th>
                 <th scope="col">Récompense</th>
-              </tr>
+            </tr>
             </thead>
-            <tbody>
+              <tbody>
               {questsQuery.data.map((quest: Quest) => (
-                <tr>
-                  <th scope="row">{quest.quest_npc}</th>
-                  <td>{quest.quest_name}</td>
-                  <td>{quest.description}</td>
-                  <td>???</td>
-                  <td>{quest.city}</td>
-                  <td>{quest.reward}</td>
-                </tr>
+                  <tr>
+                      <th scope="row">{quest.quest_npc}</th>
+                      <td>{quest.quest_name}</td>
+                      <td>{quest.description}</td>
+                      <td>???</td>
+                      <td>{quest.repeatable}</td>
+                      <td>{quest.city}</td>
+                      <td>{quest.reward}</td>
+                  </tr>
               ))}
             </tbody>
           </table>
