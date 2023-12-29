@@ -1,76 +1,52 @@
 import ReactPlayer from "react-player";
-import { ImageComponent } from "../../components/ImageComponent";
-
-import banner from "../../assets/imgs/original/BannerCityPave.jpg";
-import bannerSmall from "../../assets/imgs/small/BannerCityPave-small.jpg";
-
-export default function Home() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <ImageComponent
-        image={banner}
-        backgroundImage={bannerSmall}
-        ratio={3 / 1}
-      />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          backgroundColor: "red",
-          width: "100%",
-          color: "white",
-        }}
-      >
-        <p
-          style={{
-            margin: "0px",
-          }}
-        >
-          Plus d'information prochainement.
-        </p>
-      </div>
-      <div
-        style={{
-          height: "30%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          gap: "20px",
-          padding: "20px",
-          fontSize: "21px",
-          // backgroundColor: "#3036db",
-        }}
-      >
+import styles from "./Home.module.css"
+export default function Info() {
+    return (
         <div>
-          <h2>La cité de la PAVE III</h2>
-          <p>
-            Après plus de 2 ans d'attente, la troisième édition de la cité de la
-            PAVE aura lieu 02/01/2024 au 06/01/2024, en équipe de 1 à 5.
-          </p>
-          <p>
-            Initialement, il s’agissait d’un évènement de type « cité des sables
-            » avec en plus des quêtes. Mais cette édition sera tournée
-            exclusivement autour d’un système de quêtes mettant au centre de
-            l’évènement tous les aspects du jeu. Il y aura au programme du
-            farming, du PVP, du PVE, de l’exploration et des énigmes.
-          </p>
+            <header className={styles.header}>
+                <div className={styles.overlay}></div>
+                <ReactPlayer
+                    url="https://youtu.be/-oQC9GtfgSc?si=KuZpantz7RgwHNDh&t=11"
+                    config={{ youtube: { playerVars: { disablekb: 1 } } }}
+                    className={styles.video}
+                    width="800px"
+                    height="450px"
+                    playing   // équivalent à autoplay
+                    muted     // équivalent à muted
+                    loop      // équivalent à loop
+                    playsinline
+                />
+                <div className={`${styles.container} h-100`}>
+                    <div className="d-flex h-100 text-center align-items-center">
+                        <div className="w-100 text-white">
+                            <h1 className="display-3">LA CITÉ DE LA PAVE 3</h1>
+                            <p className="lead mb-0">Ouverture du serveur mardi 02 Janvier 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section className="my-5">
+                <div className={styles.container}>
+                    <div className="row justified-text">
+                        <div className="col-md-5 mx-auto">
+                            <p className="row justified-text"> Après plus de 2 ans d'attente, la troisième édition de la cité de la
+                                PAVE aura lieu 02/01/2024 au 06/01/2024, en équipe de 1 à 5.</p>
+                            <p className="row justified-text">Initialement, il s’agissait d’un évènement de type « cité des sables
+                                » avec en plus des quêtes. Mais cette édition sera tournée
+                                exclusivement autour d’un système de quêtes mettant au centre de
+                                l’évènement tous les aspects du jeu. Il y aura au programme du
+                                farming, du PVP, du PVE, de l’exploration et des énigmes.</p>
+                            <p className="row justified-text">Vous trouverez sur ce site toutes les informations nécessaire à propos de l'event.</p>
+                            <p className="row mb-0 justified-text">
+                                Lien vers le serveur Discord:&nbsp;<a href="https://discord.gg/d5nCVEBuSN">cliquez
+                                ici</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </div>
-        <div>
-          <ReactPlayer
-            url="https://youtu.be/-oQC9GtfgSc?si=8jCxXF6vKth6j6bk"
-            controls={false}
-            width="800px"
-            height="450px"
-          />
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
