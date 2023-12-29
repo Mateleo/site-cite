@@ -22,6 +22,7 @@ export interface Quest {
   quest_name: string;
   quest_npc: string;
   description: string;
+  repeatable: string;
   city: string;
   reward: number;
 }
