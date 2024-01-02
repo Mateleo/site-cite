@@ -41,8 +41,7 @@ export default function Info() {
           <h3>Banquier et Marchands </h3>
           <p className="lead text-muted">
             Vous retrouverez dans toutes les cités, les pnjs banquier et
-            marchand côte à côte. Le pnj banquier a été présenté dans la cidéo
-            ci-dessus.
+            marchand côte à côte.
           </p>
           <p className="lead text-muted">
             Le pnj marchand quant à lui propose plusieurs échanges pour obtenir
