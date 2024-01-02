@@ -31,6 +31,11 @@ export default function Info() {
             Donne le compte en banque de l’équipe spécifié.
           </p>{" "}
           <p className="lead text-muted">
+            <strong>/quest</strong>
+            <br />
+            Ouvre l'UI des quêtes pour voir les quêtes en cours et terminées.
+          </p>{" "}
+          <p className="lead text-muted">
             <strong>/debug</strong>
             <br />
             Vous donne un effet de jump boost si vous êtes stuck dans une zone
